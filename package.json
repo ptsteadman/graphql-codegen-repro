@@ -11,8 +11,7 @@
     "@graphql-codegen/cli": "2.3.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gen": "graphql-codegen --config codegen.yml"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"

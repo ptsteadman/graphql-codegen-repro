@@ -24,7 +24,6 @@ npm_install(
     ],
     data = [
     ],
-    exports_directories_only = True,
     package_json = "//:package.json",
     package_lock_json = "//:package-lock.json",
 )

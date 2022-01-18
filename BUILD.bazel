@@ -1,15 +1,21 @@
 load("@npm//@graphql-codegen/cli:index.bzl", "graphql_codegen")
+load("//:generate-config.bzl", "generate_config")
+
+# config just generated to make this example work crossplatform
+generate_config(
+    name = "config",
+)
 
 graphql_codegen(
     name = "gen",
     outs = ["types.ts"],
     args = [
         "--config",
-        "$(location codegen.yml)",
+        "$(location :config)",
     ],
     data = [
-        "codegen.yml",
         "schema.graphql",
+        ":config",
         "@npm//@graphql-codegen/cli",
         "@npm//@graphql-codegen/typescript",
     ],
