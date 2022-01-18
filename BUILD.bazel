@@ -1,0 +1,16 @@
+load("@npm//@graphql-codegen/cli:index.bzl", "graphql_codegen")
+
+graphql_codegen(
+    name = "gen",
+    outs = ["types.ts"],
+    args = [
+        "--config",
+        "$(location codegen.yml)",
+    ],
+    data = [
+        "codegen.yml",
+        "schema.graphql",
+        "@npm//@graphql-codegen/cli",
+        "@npm//@graphql-codegen/typescript",
+    ],
+)

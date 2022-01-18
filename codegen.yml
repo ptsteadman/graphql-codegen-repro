@@ -2,6 +2,6 @@ overwrite: true
 schema: "schema.graphql"
 documents: null
 generates:
-  types.d.ts:
+  bazel-out/darwin-fastbuild/bin/types.ts:
     plugins:
       - "typescript"
